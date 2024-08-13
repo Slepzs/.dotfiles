@@ -8,11 +8,12 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.completion.copilot-cmp" },
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.scrolling.cinnamon-nvim" },
   { import = "astrocommunity.pack.tailwindcss" },
+  { import = "astrocommunity.bars-and-lines.vim-illuminate" },
   -- { import = "astrocommunity.editing-support.auto-save-nvim" },
-  { import = "astrocommunity.workflow.precognition-nvim" },
+  -- { import = "astrocommunity.workflow.precognition-nvim" },
   -- import/override with your plugins folder
 }
