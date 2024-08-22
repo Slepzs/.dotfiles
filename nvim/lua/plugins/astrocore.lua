@@ -50,6 +50,12 @@ return {
         L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
+        -- Add these new mappings for split resizing using Alt + Arrow keys
+        ["<A-Left>"] = { "<cmd>vertical resize -5<CR>", desc = "Decrease width" },
+        ["<A-Right>"] = { "<cmd>vertical resize +5<CR>", desc = "Increase width" },
+        ["<A-Down>"] = { "<cmd>resize -5<CR>", desc = "Decrease height" },
+        ["<A-Up>"] = { "<cmd>resize +5<CR>", desc = "Increase height" },
+
         -- mappings seen under group name "Buffer"
         ["<Leader>bD"] = {
           function()
