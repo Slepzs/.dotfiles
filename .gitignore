@@ -13,3 +13,5 @@ configstore
 stripe
 .DS_Store
 */**/.DS_Store
+yarn/*
+yarn/global/

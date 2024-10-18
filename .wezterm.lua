@@ -106,10 +106,10 @@ end
 
 config.key_tables = {
 	resize_pane = {
-		{ key = "h", action = act.AdjustPaneSize({ "Left", 1 }) },
-		{ key = "j", action = act.AdjustPaneSize({ "Down", 1 }) },
-		{ key = "k", action = act.AdjustPaneSize({ "Up", 1 }) },
-		{ key = "l", action = act.AdjustPaneSize({ "Right", 1 }) },
+		{ key = "h", action = act.AdjustPaneSize({ "Left", 15 }) },
+		{ key = "j", action = act.AdjustPaneSize({ "Down", 15 }) },
+		{ key = "k", action = act.AdjustPaneSize({ "Up", 15 }) },
+		{ key = "l", action = act.AdjustPaneSize({ "Right", 15 }) },
 		{ key = "Escape", action = "PopKeyTable" },
 		{ key = "Enter", action = "PopKeyTable" },
 	},
