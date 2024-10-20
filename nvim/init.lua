@@ -19,6 +19,9 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
+vim.keymap.set("n", "<c-p>", "<Plug>(YankyPreviousEntry)")
+vim.keymap.set("n", "<c-n>", "<Plug>(YankyNextEntry)")
+
 vim.opt.swapfile = false
 
 require "lazy_setup"
