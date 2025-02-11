@@ -15,3 +15,5 @@ stripe
 */**/.DS_Store
 yarn/*
 yarn/global/
+.aider*
+.env
