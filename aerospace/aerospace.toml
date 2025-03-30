@@ -61,10 +61,10 @@ on-focus-changed = "move-mouse window-lazy-center"
 [gaps]
 inner.horizontal = 40
 inner.vertical =   40
-outer.left =       40
-outer.bottom =     40
-outer.top =        60
-outer.right =      40
+outer.left =       20
+outer.bottom =     20
+outer.top =        20
+outer.right =      20
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'finder'
