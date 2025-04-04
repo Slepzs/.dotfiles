@@ -17,35 +17,34 @@ return {
   -- },
 
   -- == Examples of Overriding Plugins ==
-   {
+  {
     "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
     opts = {},
   },
-  {
-    "Exafunction/codeium.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "hrsh7th/nvim-cmp",
-    },
-    event = "BufEnter",
-    config = function()
-      require("codeium").setup {
-        enable_cmp_source = true,
-        virtual_text = {
-          enabled = true,
-          manual = false,
-          map_keys = true,
-          key_bindings = {
-            accept = "<C-y>",
-            next = "<M-]>",
-            prev = "<M-[>",
-          },
-        },
-      }
-    end,
-  },
+  -- {
+  --   "Exafunction/codeium.nvim",
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --   },
+  --   event = "BufEnter",
+  --   config = function()
+  --     require("codeium").setup {
+  --       enable_cmp_source = true,
+  --       virtual_text = {
+  --         enabled = true,
+  --         manual = false,
+  --         map_keys = true,
+  --         key_bindings = {
+  --           accept = "<C-y>",
+  --           next = "<M-]>",
+  --           prev = "<M-[>",
+  --         },
+  --       },
+  --     }
+  --   end,
+  -- },
 
   -- customize dashboard options
   {
@@ -75,7 +74,7 @@ return {
   -- { "max397574/better-escape.nvim", enabled = false },
 
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
-  
+
   --   "L3MON4D3/LuaSnip",
   --   config = function(plugin, opts)
   --     require "astronvim.plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
