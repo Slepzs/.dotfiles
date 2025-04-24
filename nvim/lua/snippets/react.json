@@ -1,0 +1,11 @@
+{
+  "setup": {
+    "prefix": [
+      "newspace"
+    ],
+    "body": [
+      "{'n/'}"
+    ],
+    "description": "React Native Space"
+  }
+}

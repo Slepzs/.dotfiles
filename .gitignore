@@ -17,3 +17,5 @@ yarn/*
 yarn/global/
 .aider*
 .env
+*.aider
+*.aider.*

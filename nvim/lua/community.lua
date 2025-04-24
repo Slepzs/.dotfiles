@@ -11,7 +11,6 @@ return {
   { import = "astrocommunity.scrolling.cinnamon-nvim" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.bars-and-lines.vim-illuminate" },
-  { import = "astrocommunity.lsp.lsp-signature-nvim" },
+  -- { import = "astrocommunity.lsp.lsp-signature-nvim" },
   { import = "astrocommunity.recipes.ai" },
-  { import = "astrocommunity.completion.copilot-cmp" },
 }
