@@ -33,6 +33,9 @@ config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
 config.default_workspace = "main"
 
+config.send_composed_key_when_left_alt_is_pressed = true
+config.send_composed_key_when_right_alt_is_pressed = true
+
 -- Dim inactive panes
 config.inactive_pane_hsb = {
 	saturation = 0.24,
