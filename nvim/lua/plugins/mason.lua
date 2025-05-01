@@ -14,11 +14,13 @@ return {
         -- install language servers
         "lua-language-server",
 
+        -- "copilot-language-server",
+
         -- install formatters
-        "stylua",
+        -- "stylua",
 
         -- install debuggers
-        "debugpy",
+        -- "debugpy",
 
         -- install any other package
         "tree-sitter-cli",
