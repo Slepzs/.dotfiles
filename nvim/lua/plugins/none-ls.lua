@@ -1,24 +1,27 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- Customize None-ls sources
 
 ---@type LazySpec
 return {
   "nvimtools/none-ls.nvim",
   opts = function(_, opts)
-    -- opts variable is the default configuration table for the setup function call
-    -- local null_ls = require "null-ls"
+    local null_ls = require "null-ls"
+    local astro = require "astrocore"
 
-    -- Check supported formatters and linters
-    -- https://github.com/nvimtools/none-ls.nvim/tree/main/lua/null-ls/builtins/formatting
-    -- https://github.com/nvimtools/none-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
+    -- Add Biome for formatting and diagnostics instead of Prettier
+    local new_sources = {}
+    if null_ls.builtins and null_ls.builtins.formatting and null_ls.builtins.formatting.biome then
+      table.insert(new_sources, null_ls.builtins.formatting.biome)
+    end
+    if null_ls.builtins and null_ls.builtins.diagnostics and null_ls.builtins.diagnostics.biome then
+      table.insert(new_sources, null_ls.builtins.diagnostics.biome)
+    end
+    -- You can also enable code actions if desired:
+    -- if null_ls.builtins.code_actions and null_ls.builtins.code_actions.biome then
+    --   table.insert(new_sources, null_ls.builtins.code_actions.biome)
+    -- end
 
-    -- Only insert new sources, do not replace the existing ones
-    -- (If you wish to replace, use `opts.sources = {}` instead of the `list_insert_unique` function)
-    opts.sources = require("astrocore").list_insert_unique(opts.sources, {
-      -- Set a formatter
-      -- null_ls.builtins.formatting.stylua,
-      -- null_ls.builtins.formatting.prettier,
-    })
+    if #new_sources > 0 then
+      opts.sources = astro.list_insert_unique(opts.sources or {}, new_sources)
+    end
   end,
 }

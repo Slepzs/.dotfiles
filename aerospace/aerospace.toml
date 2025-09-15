@@ -200,4 +200,4 @@ alt-shift-l = ['join-with right', 'mode main']
 "5" = 'secondary'
 "P" = 'secondary'
 "G" = 'secondary'
-"V" = 'secondary'
+"V" = 'main'

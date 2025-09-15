@@ -1,19 +1,48 @@
-return {
-  { "jose-elias-alvarez/typescript.nvim", lazy = true }, -- add lsp plugin
-  {
-    "AstroNvim/astrolsp",
-    ---@type AstroLSPOpts
-    opts = {
-      setup_handlers = {
-        -- add custom handler
-        tsserver = function(_, opts) require("typescript").setup { server = opts } end,
-      },
-    },
-  },
-  {
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
-    opts = {
-      ensure_installed = { "typescript-language-server" }, -- automatically install lsp
-    },
-  },
-}
+-- return {
+--   -- Install and configure typescript-tools
+--   {
+--     "pmizio/typescript-tools.nvim",
+--     lazy = true,
+--     dependencies = { "nvim-lua/plenary.nvim" },
+--   },
+--   {
+--     "AstroNvim/astrolsp",
+--     ---@type AstroLSPOpts
+--     opts = {
+--       -- Use typescript-tools instead of lspconfig.tsserver
+--       handlers = {
+--         -- Disable biome LSP to avoid duplicate with null-ls biome
+--         biome = false,
+--         -- Replace ts_ls (formerly tsserver) with typescript-tools
+--         ts_ls = function(_, opts)
+--           require("typescript-tools").setup {
+--             on_attach = function(client, bufnr)
+--               if opts.on_attach then opts.on_attach(client, bufnr) end
+--               -- prefer Biome/none-ls for formatting
+--               client.server_capabilities.documentFormattingProvider = false
+--               client.server_capabilities.documentRangeFormattingProvider = false
+--             end,
+--             capabilities = opts.capabilities,
+--             settings = {
+--               tsserver_file_preferences = {
+--                 includeCompletionsForModuleExports = true,
+--                 quotePreference = "auto",
+--               },
+--             },
+--           }
+--           return true -- signal AstroLSP that we handled setup
+--         end,
+--       },
+--       -- Disable LSP formatting from TypeScript to prefer Biome/none-ls
+--       formatting = {
+--         disabled = { "typescript-tools", "ts_ls" },
+--       },
+--     },
+--   },
+--   {
+--     "WhoIsSethDaniel/mason-tool-installer.nvim",
+--     opts = {
+--       ensure_installed = { "typescript-language-server", "biome" }, -- ensure Biome is available
+--     },
+--   },
+-- }

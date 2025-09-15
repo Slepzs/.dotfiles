@@ -19,3 +19,6 @@ yarn/global/
 .env
 *.aider
 *.aider.*
+zed
+zed.*
+aerospace

@@ -69,7 +69,9 @@ return {
       },
     },
   },
-
+  {
+    "dmmulroy/ts-error-translator.nvim",
+  },
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
 
@@ -113,4 +115,7 @@ return {
   --     )
   --   end,
   -- },
+
+  -- Disable nvim-ufo to prevent fold recompute jumps on undo
+  { "kevinhwang91/nvim-ufo", enabled = false },
 }
