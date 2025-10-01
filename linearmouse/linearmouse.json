@@ -1,5 +1,4 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
   "schemes" : [
     {
       "pointer" : {
@@ -7,12 +6,29 @@
       },
       "if" : {
         "device" : {
-          "productID" : "0x1854",
-          "vendorID" : "0x111",
           "productName" : "Aerox 5 WL",
-          "category" : "mouse"
+          "vendorID" : "0x111",
+          "category" : "mouse",
+          "productID" : "0x1854"
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "vendorID" : "0x46d",
+          "productID" : "0xb019",
+          "productName" : "MX Master 2S",
+          "category" : "mouse",
+          "serialNumber" : "27BD3E9F0E52D9F9"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
         }
       }
     }
-  ]
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
 }

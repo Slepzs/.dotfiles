@@ -6,6 +6,7 @@ return {
   opts = function(_, opts)
     local null_ls = require "null-ls"
     local astro = require "astrocore"
+    local methods = null_ls.methods
 
     -- Add Biome for formatting and diagnostics instead of Prettier
     local new_sources = {}
@@ -13,7 +14,10 @@ return {
       table.insert(new_sources, null_ls.builtins.formatting.biome)
     end
     if null_ls.builtins and null_ls.builtins.diagnostics and null_ls.builtins.diagnostics.biome then
-      table.insert(new_sources, null_ls.builtins.diagnostics.biome)
+      table.insert(
+        new_sources,
+        null_ls.builtins.diagnostics.biome.with { method = methods.DIAGNOSTICS_ON_SAVE }
+      )
     end
     -- You can also enable code actions if desired:
     -- if null_ls.builtins.code_actions and null_ls.builtins.code_actions.biome then

@@ -1,15 +1,22 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 return {
   "zbirenbaum/copilot.lua",
   cmd = "Copilot",
   build = ":Copilot auth",
   event = "BufReadPost",
-  opts = { suggestion = {
-    auto_trigger = true,
-    debounce = 25,
-    keymap = { accept = false },
-  } },
+  opts = {
+    suggestion = {
+      auto_trigger = true,
+      debounce = 50,
+      keymap = { accept = false },
+    },
+    panel = { enabled = false },
+    filetypes = {
+      markdown = false,
+      help = false,
+      gitcommit = false,
+      gitrebase = false,
+    },
+  },
   specs = {
     {
       "AstroNvim/astrocore",

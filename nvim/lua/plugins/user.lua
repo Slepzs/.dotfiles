@@ -72,6 +72,8 @@ return {
   {
     "dmmulroy/ts-error-translator.nvim",
   },
+  -- Prefer zbirenbaum/copilot.lua over copilot.vim (disable community copilot.vim)
+  { "github/copilot.vim", enabled = false },
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
 
