@@ -1,26 +1,31 @@
 {
   "schemes" : [
     {
-      "pointer" : {
-        "acceleration" : 0.995
-      },
       "if" : {
         "device" : {
           "productName" : "Aerox 5 WL",
+          "productID" : "0x1854",
           "vendorID" : "0x111",
-          "category" : "mouse",
-          "productID" : "0x1854"
+          "category" : "mouse"
         }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0.995
       }
     },
     {
       "if" : {
         "device" : {
-          "vendorID" : "0x46d",
-          "productID" : "0xb019",
+          "serialNumber" : "27BD3E9F0E52D9F9",
           "productName" : "MX Master 2S",
           "category" : "mouse",
-          "serialNumber" : "27BD3E9F0E52D9F9"
+          "vendorID" : "0x46d",
+          "productID" : "0xb019"
         }
       },
       "scrolling" : {

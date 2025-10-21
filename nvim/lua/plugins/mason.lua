@@ -15,6 +15,7 @@ return {
         "lua-language-server",
         -- formatters / linters
         "biome",
+        "prettierd",
 
         -- "copilot-language-server",
 
@@ -33,8 +34,8 @@ return {
     "jay-babu/mason-null-ls.nvim",
     opts = {
       handlers = {
-        prettier = function() end, -- Disable prettier completely
-        prettierd = function() end, -- Disable prettierd completely
+        prettier = function() end, -- Let none-ls.lua conditionally handle Prettier
+        prettierd = function() end, -- Let none-ls.lua conditionally handle Prettier
         biome = function() end, -- Let none-ls.lua handle Biome registration (format + diagnostics)
       },
     },
